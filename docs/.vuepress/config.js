@@ -1,6 +1,6 @@
 module.exports = {
-    API_LOCATION: 'https://pascal.pythonanywhere.com/predict/',
-    //API_LOCATION: '',
+    //API_LOCATION: 'https://pascal.pythonanywhere.com/predict/',
+    API_LOCATION: 'http://192.168.1.128:5000/predict/',
     markdown:{
         anchor: { permalink: true, permalinkBefore: true, permalinkSymbol: '' }
     },

@@ -27,7 +27,7 @@
                 <h3>&nbsp;</h3>
                 <p>
                     <small>Der Computer sagt:</small><br>
-                    <span v-if="result.bin">Hate Speech!</span>
+                    <span v-if="result.bin" class="danger">Hate Speech!</span>
                     <span v-else>Kein Hate Speech</span>
                     <br>
                     <small>Deine Eingabe</small><br>
@@ -52,7 +52,7 @@ export default {
     data() {
         return { 
             text: '', 
-            model: 'v2_rf',
+            model: 'v3_rf',
             result: false,
             loading: false,
             primary_color: '#f41839'
