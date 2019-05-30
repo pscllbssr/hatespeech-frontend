@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{120:function(t,e){t.exports={API_LOCATION:"http://pascal.pythonanywhere.com/predict/",markdown:{anchor:{permalink:!0,permalinkBefore:!0,permalinkSymbol:""}},locales:{"/":{lang:"de-CH",title:"Hate Speech",description:"Der Hass im Netz und wieso er so schwierig zu bekämpfen ist"}}}},121:function(t,e,n){
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{120:function(t,e){t.exports={API_LOCATION:"https://pascal.pythonanywhere.com/predict/",markdown:{anchor:{permalink:!0,permalinkBefore:!0,permalinkSymbol:""}},locales:{"/":{lang:"de-CH",title:"Hate Speech",description:"Der Hass im Netz und wieso er so schwierig zu bekämpfen ist"}}}},121:function(t,e,n){
 /*!
  * VueEasyPieChart v1.0.2 (https://github.com/dotnetage/vue-easy-pie-chart)
  * (c) 2016 Ray
