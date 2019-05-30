@@ -1,0 +1,34 @@
+.section-form
+    position relative
+    box-shadow 0px 0px 5px 0px hsl(0, 0%, 89%)
+    padding 1em
+
+    @media medium 
+        padding 2em
+
+    h2
+        margin-top 0
+
+.hate-result
+    display grid 
+    grid-template-columns 1fr
+
+    @media small
+        grid-template-columns 1fr 1fr
+        grid-column-gap 3em
+
+    h3
+        margin-top 0
+
+    small 
+        color clr-gray
+.loading
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    display flex
+    align-items center
+    background #ffffffc2
+    font-size 2rem

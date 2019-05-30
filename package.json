@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "normalize.css": "^8.0.1",
+    "vuepress": "^0.14.10"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "resolutions": {
+    "webpack-dev-middleware": "3.6.0"
+  },
+  "dependencies": {
+    "vue-easy-pie-chart": "^1.0.3",
+    "vue-parallax-js": "^0.2.3"
+  }
+}

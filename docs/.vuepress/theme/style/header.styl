@@ -1,0 +1,47 @@
+.theme-header 
+    background clr-primary
+    min-height 66vh
+
+    display flex
+    justify-content center
+    align-items center
+    margin-bottom 2em
+
+    position relative
+    overflow hidden
+
+    header
+        z-index: 2
+        h1
+            color clr-white
+            font-size 2rem
+            text-shadow 3px 3px 10px clr-primary
+            text-align center
+            @media medium
+                font-size 3.5rem
+            @media large
+                font-size 4rem
+    
+.parallax
+    position absolute
+    top 0
+    background-position center !important
+    transform translateY(0px)
+    height 66vh
+    width 100%
+    background-size: contain
+    
+    opacity 0.5
+    z-index: 1
+
+.bubble-1
+    background-image url('../img/bubbles.png')
+.bubble-2
+    background-image url('../img/bubbles2.png')
+.bubble-3
+    background-image url('../img/bubbles3.png')
+.bubble-4
+    background-image url('../img/bubbles4.png')
+    
+
+    
