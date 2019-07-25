@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :title="$page.frontmatter.title" parallax />
+    <Header parallax />
     <div class="theme-container">
       <Content/>
     </div>

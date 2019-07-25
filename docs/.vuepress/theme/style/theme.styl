@@ -4,6 +4,7 @@
 
 @require 'header'
 @require 'hateform'
+@require 'quiz'
 
 
 /**
@@ -21,9 +22,30 @@ body
   margin 0 auto
 
 p
-.section_element
+ul
+.custom-block
     max-width 760px
-    margin 0 auto 2em
+    margin 0 auto 1em
+
+
+.section-element
+  max-width 760px
+  margin 2em auto
+
+.section-form
+    position relative
+    box-shadow 0px 0px 5px 0px hsl(0, 0%, 89%)
+    padding 1.5em
+
+    @media medium 
+        padding 2em
+
+    h2
+        margin 0 auto 1em
+
+.section-form__description
+  font-size 0.9rem
+  margin-top 1em
 
 .section_element media
   max-width 100%
@@ -31,7 +53,7 @@ p
 h2, h3
     max-width 760px
 h2
-    margin 2em auto 1em
+    margin 1em auto .5em
 h3 
     margin 1.5em auto .75em
 
@@ -41,3 +63,14 @@ a
   
   &:hover
     text-decoration none
+
+
+
+.info-box
+  padding 1em 2em 
+  background clr-light
+  
+
+  p
+    font-family: 'Source Sans Pro', sans-serif
+    text-align: left

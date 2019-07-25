@@ -1,7 +1,10 @@
 <template>
     <div class="theme-header" ref="header">
         <header>
-            <h1>{{ title }}</h1>
+            <div>
+                <h1>{{ $page.frontmatter.title }}</h1>
+                <div class="sans-serif theme-header__meta">{{ $page.frontmatter.date }} - {{ $page.frontmatter.author }}</div>
+            </div>            
         </header> 
         <div class="parallax bubble-1" data-offset="0.1"></div>
         <div class="parallax bubble-2" data-offset="0.2"></div> 
@@ -12,7 +15,6 @@
 <script>
 
 export default {
-    props: ['title'],
     data() {
         return { 
             parallax_children: []
@@ -32,7 +34,6 @@ export default {
             }
         }
     }
-    //directives: {parallax: VueParallaxJs}
 }
 </script>
 
