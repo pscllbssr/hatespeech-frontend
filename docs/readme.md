@@ -3,6 +3,11 @@ title: Der Hass im Netz
 author: Pascal Albisser
 date: 9. August 2019
 ---
+
+*[Wiegand]: Dr. Michael Wiegand, Computerlinguist, forscht am Leibniz-Wissenschafts Campus «Empirical Linguistics and Computational Language Modeling», einem Kooperationsprojekt des Leibniz-Instituts für Deutsche Sprache (IDS) Mannheim und des Instituts für Computerlinguistik der Universität Heidelberg
+*[Stahel]: Dr. Lea Stahel, Soziologisches Institut, Universität Zürich, forscht zu digitaler Soziologie und Online Aggression, Dissertation: «Microfoundations of aggressive commenting on social media within a sociological multilevel perspective»
+*[Bretschneider]: Dr. Uwe Bretschneider, Data Scientist, promovierte zum Thema «Detektion von Directed Hate Speech, Online Harassment und Cyberbullying in Online Communities»
+
 _Das Internet ist voll von Hass. Bei der Unmenge an Kommentaren und Beiträgen scheint es unmöglich, alle von Menschen überprüfen zu lassen, um Hass abzufangen. Deshalb setzen viele ihre Hoffnung in eine automatische Überprüfung durch eine künstliche Intelligenz. Doch können Maschinen für uns das Internet retten?_
 
 Die Hoffnung kommt nicht von irgendwo. Künstliche Intelligenz hat in jüngster Zeit erstaunliche Fortschritte ermöglicht. Sprachassistenten, autonomes Fahren, Gesichtserkennung. Das sollte es doch auch möglich sein, Hass-Kommentare zu filtern. 
@@ -53,10 +58,19 @@ Lea Stahel weist darauf hin, dass man Hate Speech aber kaum aus rein technischer
 
 Die Frage nach einer maschinellen Lösung wirft also ganz viele Folgefragen auf, mit denen wir uns wohl noch eine Weile beschäftigen werden. Eines scheint aber klar zu sein: Rettung ist von den Maschinenwelt vorerst keine zu erwarten. Wir müssen selbst mit diesem Problem fertig werden.
 
+### Artikel teilen:
+<ClientOnly>
+  <Social />
+</ClientOnly>
+
 ::: info Über 
 
 ## Über
 
-Dieser Artikel ist als Lehrprojekt im Rahmen meiner Bachelorarbeit im Studiengang Media Engineering an der HTW Chur entstanden. 
+Dieser Artikel ist Teil meiner Bachelorarbeit im Studiengang «Media Engineering» an der HTW Chur. In der begleitenden wissenschaftlichen Arbeit habe ich mich mit der Frage beschäftigt, inwiefern Machine Learning in der journalistischen Recherche eine Rolle spielen kann. Für Fragen, Anregungen und Kritik bin ich unter der Adresse <pscl.lbssr@gmail.com> erreichbar.
+
+- [Webseite](https://pscl.lbssr.ch)<br>
+- [Github](https://github.com/pscllbssr)<br>
+- [LinkedIn](https://www.linkedin.com/in/pascal-albisser)<br>
 
 :::

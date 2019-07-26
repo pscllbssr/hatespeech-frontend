@@ -4,9 +4,8 @@ module.exports = {
     markdown:{
         anchor: { permalink: true, permalinkBefore: true, permalinkSymbol: '' },
         config: md => {
-            md.use(require("markdown-it-container"), "info", 
-                infoBox
-            );
+            md.use(require("markdown-it-container"), "info", infoBox)
+            md.use(require('markdown-it-abbr'))
         }
     },
     base: '/der-hass-im-netz/',

@@ -14,12 +14,17 @@
 </template>
 <script>
 
+import Social from './Social'
+
 export default {
     data() {
         return { 
             parallax_children: []
         }
     },
+    components: [
+        Social
+    ],
     mounted: function(){
         let header_div = this.$refs["header"]
         this.parallax_children = header_div.getElementsByClassName('parallax')

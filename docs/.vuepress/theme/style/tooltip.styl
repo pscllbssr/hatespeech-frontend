@@ -1,0 +1,21 @@
+abbr 
+  position: relative;
+  border-bottom: 1px dotted clr-black
+
+abbr:hover::after, 
+.tooltip-content
+  position: absolute;
+  top: 120%;
+  left 0
+  right 0
+  width: 300px
+  display: block;
+  padding: 1em;
+  background: clr-light
+  content: attr(data-title);
+  z-index: 99
+  font-family: 'Source Sans Pro', sans-serif
+  text-align: left
+  font-size: .9rem
+  box-shadow 0px 0px 5px 0px hsl(0, 0%, 89%)
+  line-height: 1.2

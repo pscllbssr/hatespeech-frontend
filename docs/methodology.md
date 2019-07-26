@@ -4,7 +4,7 @@ title: Methodik Hate Speech Classifier
 
 Ich habe ein Machine Learning Modell entwickelt, das Hate Speech in Textnachrichten erkennen kann, einen Hate Speech Classifier. Der ganze Programmiercode für das entwickelte Modell kann auf Github abgerufen werden. 
 
-[github.com/pscllbssr/hatespeech-ml](https://github.com/pscllbssr/hatespeech-ml)
+- [github.com/pscllbssr/hatespeech-ml](https://github.com/pscllbssr/hatespeech-ml)
 
 Nachfolgend eine Beschreibung, wie ich konkret vorgegangen bin, um das Modell zu entwickeln.
 
@@ -12,7 +12,7 @@ Nachfolgend eine Beschreibung, wie ich konkret vorgegangen bin, um das Modell zu
 
 Damit das Modell lernen konnte, Hasskommentare zu erkennen, benötigte ich zuerst genügend Trainingsdaten. Also Beispiele von Hasskommenteren, aber auch Gegenbeispiele, Kommentare frei von Hass. 
 
-Zu diesem Zweck wollte ich ursprünglich Hasskommentare verwenden, bei denen es zu einer Verurteilung kam. Ein solcher Datensatz war aber schwer zu beschaffen und in der Summe zu wenige Beispiele, um Machine Learning damit zu betreiben. Ein anderer Ansatz war, Kommentarspalten aus Online-Medienangeboten oder gesammelte Hasskommentare von Anti-Diskriminierungsstellen zu verwenden. Diese waren aber meist zu wenig strukturiert oder schlicht nicht zugänglich. 
+Zu diesem Zweck wollte ich ursprünglich Hasskommentare verwenden, bei denen es zu einer Verurteilung kam. Ein solcher Datensatz war aber schwer zu beschaffen und enthielt in der Summe zu wenige Beispiele, um Machine Learning damit zu betreiben. Ein anderer Ansatz war, Kommentarspalten aus Online-Medienangeboten oder gesammelte Hasskommentare von Anti-Diskriminierungsstellen zu verwenden. Diese waren aber meist zu wenig strukturiert oder schlicht nicht zugänglich. 
 
 Schlussendlich griff ich auf drei Datensätze aus der Forschung zurück, die ich zu einem grossen Datensatz kombinierte. Die verwendeten Datensätze:
 
@@ -32,23 +32,25 @@ Ein zentraler Punkt beim Machine Learning ist das sogenannte «Feature-Engineeri
 
 In einem ersten Schritt anonymisiere ich Benutzernamen, falls das nicht bereits in den Quell-Datensätzen geschehen ist. Zudem werden Elemente entfernt, die nichts direkt mit dem untersuchten Text zu tun haben, beispielsweise Links oder plattformspezifische Ausdrücke wie RT (Hinweis auf einen Retweet bei Twitter). Diese Elemente würden ansonsten das Resultat verzerren. 
 
-In einem weiteren Schritt entferne ich «Stopwords» aus dem Text. Stopwords sind Wörter, die in einer Sprache oft vorkommen und nicht wirklich zur Aussage eines Textes beitragen. (Stopwords-Erklärung). Anschliessend benutzte ich einen [Lemmatizer](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html), um Wörter auf ihre Grundform zu reduzieren. Konjugierte Verben werden so als dasselbe Wort angesehen, also beispielsweise «bin», «bist» und «sind» werden in dieselbe Grundform «sein» umgewandelt. 
+In einem weiteren Schritt entferne ich «Stopwords» aus dem Text. [Stopwords](https://en.wikipedia.org/wiki/Stop_words) sind Wörter, die in einer Sprache oft vorkommen und kaum zur Aussage eines Textes beitragen, beispielsweise «der», «das», «ein», etc. Anschliessend benutzte ich einen [Lemmatizer](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html), um Wörter auf ihre Grundform zu reduzieren. Konjugierte Verben werden so als dasselbe Wort angesehen, also beispielsweise «bin», «bist» und «sind» werden in dieselbe Grundform «sein» umgewandelt. 
 
-[Code der Umwandlung](https://github.com/pscllbssr/hatespeech-ml/blob/master/0_common/model_helpers.py)
+- [Code der Umwandlung](https://github.com/pscllbssr/hatespeech-ml/blob/master/0_common/model_helpers.py)
 
-Der wichtigste Schritt in der maschinellen Sprachverarbeitung ist das Vektorisieren, also die Umwandlung von Buchstaben in Zahlen. Dies ist nötig, weil Computer nicht mit Worten oder Buchstaben rechnen, sondern mit Zahlen. Dafür gibt es verschiedene Methoden. Während der Entwicklung meines Machine Learning Modells habe ich verschiedene Verfahren ausprobiert. Schlussendlich habe ich mit einem simplen [CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html) auf der Basis von Wortteilen die besten Resultate erzielt. Diese Erfahrung findet sich auch in der Wissenschaft wieder, beispielsweise bei Schmidt und Wiegand (2017, [Link](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)). Wortteile, anstelle von ganzen Wörter, bringen eine gewisse Toleranz gegenüber Rechtschreibefehlern mit sich, was bei Hasskommentaren nicht unrelevant ist.
+Der wichtigste Schritt in der maschinellen Sprachverarbeitung ist das Vektorisieren, also die Umwandlung von Buchstaben in Zahlen. Dies ist nötig, weil Computer nicht mit Worten oder Buchstaben rechnen, sondern mit Zahlen. Dafür gibt es verschiedene Methoden. Während der Entwicklung meines Machine Learning Modells habe ich verschiedene Verfahren ausprobiert. Schlussendlich habe ich mit einem simplen [CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html) auf der Basis von Wortteilen die besten Resultate erzielt. Diese Erfahrung findet sich auch in der Wissenschaft wieder, beispielsweise bei Schmidt und Wiegand (2017, [Link](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)). Wortteile, anstelle von ganzen Wörtern, bringen eine gewisse Toleranz gegenüber Rechtschreibefehlern mit sich, was bei Hasskommentaren nicht unrelevant ist.
 
-
-
-“Fairly generic features, such as bag of words or embeddings, systematically yield reasonable classification performance. Character-level approaches work better than token-level approaches» https://www.aclweb.org/anthology/W17-1101
-
-«Mehdad and Tetreault (2016) systematically compare character n-gram features with token n-grams for hate speech detection, and find that character n-grams prove to be more predictive than token n-grams»  https://www.aclweb.org/anthology/W17-1101
-
-«Hate speech and sentiment analysis are closely related, and it is safe to assume that usually negative sentiment pertains to a hate speech message» https://www.aclweb.org/anthology/W17-1101
-konnte ich in meinem Beispiel, mit einem Korpus getestet, nicht bestätigen
+Zusätzlich suchte ich nach zusätzlichen Merkmalen, die eine bessere Unterscheidung in die beiden Klassen ermöglicht hätten. Im Ordner [Feature-Engineering](https://github.com/pscllbssr/hatespeech-ml/tree/master/2_Feature_Engineering) sind die verschiedenen Versuche abgelegt. Keines der zusätzlichen Merkmale (Textlänge, Anzahl Satzzeichen, Sentiment-Analyse, Anteil Fluchwörter im Text)liess jedoch einen erheblichen Unterschied zwischen neutralen und Hass-Kommentaren erkennen. 
 
 ## Auswahl der Algorithmen und Modell-Training
 
-finales Modell: Link
+Schlussendlich galt es einen geeigneten Machine Learning Algorithmus auszuwählen. Dazu verglich ich die gängigsten Algorithmen auf dem [F1-Score](https://www.mikulskibartosz.name/f1-score-explained/), einer gängigen Metrik im Machine Learning Bereich. ([Jupyter-Notebook](https://github.com/pscllbssr/hatespeech-ml/blob/master/3_Model_Development/5_Version/6%20Evaluation%20of%20Algorithms%20with%20large%20dataset.ipynb)). Dabei schnitt die logistische Regression am besten ab, dicht gefolgt von Decision Trees und dem Random Forest Classifier. 
 
+Anschliessend verglich ich die logistische Regression und den Random Forest weiter mit verschiedenen Einstellungen. Den Decision Tree Classifier liess ich aus, weil er gegenüber Random Forest nicht so anfällig für «Overfitting» sein soll ([Erläuterung](https://towardsdatascience.com/why-random-forests-outperform-decision-trees-1b0f175a0b5)). Overfitting bedeutet, dass ein Algorithmus zu gut auf einen Datensatz trainiert ist, sich beispielsweise unbedeutende Artefakte merkt, jedoch kaum auf generelle Beispiele angewendet werden kann. Die besten Resultate lieferte schliesslich der Random Forest Algorithmus, mit einem **F1-Score von 91.9%** und einem **Recall-Wert von 92.9%**.
+
+
+- [Jupyter-Notebook](https://github.com/pscllbssr/hatespeech-ml/blob/master/3_Model_Development/7_Version%20Deployment/4%20RF%20with%20char-vec.ipynb) des finalen Modells
+
+## Deployment
+
+Um das Modell im Internet nutzen zu können, musste ich das trainierte Modell exportieren und in eine Schnittstelle verpacken. 
+Verfügbar unter
 API und Modell Open Source - gerne weiter verwenden

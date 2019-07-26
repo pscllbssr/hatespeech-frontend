@@ -48,8 +48,6 @@
 </template>
 <script>
 
-//import config from '../config'
-
 import VueEasyPieChart from 'vue-easy-pie-chart'
 import 'vue-easy-pie-chart/dist/vue-easy-pie-chart.css'
 

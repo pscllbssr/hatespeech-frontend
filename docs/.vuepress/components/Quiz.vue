@@ -14,6 +14,10 @@
                 <button @click="loadNewComment()" class="btn">&orarr; Nächster Kommentar</button>
             </div>
         </div>
+        <div class="section-form__description sans-serif">
+            Neuegierig wie die Technik dahinter funktioniert? Unter <router-link to="methodology.html">Methodik</router-link>
+            findest du eine ausführliche Beschreibung des Vorgehens.
+        </div>
     </div>
 </template>
 <script>
