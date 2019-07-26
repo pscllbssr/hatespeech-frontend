@@ -11,7 +11,9 @@
     "webpack-dev-middleware": "3.6.0"
   },
   "dependencies": {
+    "js-yaml": "3.13.1",
     "markdown-it-abbr": "^1.0.4",
+    "markdown-it-custom-block": "^0.1.1",
     "vue-easy-pie-chart": "^1.0.3",
     "vue-parallax-js": "^0.2.3"
   }

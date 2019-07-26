@@ -58,14 +58,15 @@ Lea Stahel weist darauf hin, dass man Hate Speech aber kaum aus rein technischer
 
 Die Frage nach einer maschinellen Lösung wirft also ganz viele Folgefragen auf, mit denen wir uns wohl noch eine Weile beschäftigen werden. Eines scheint aber klar zu sein: Rettung ist von den Maschinenwelt vorerst keine zu erwarten. Wir müssen selbst mit diesem Problem fertig werden.
 
-### Artikel teilen:
+***
+
 <ClientOnly>
   <Social />
 </ClientOnly>
 
 ::: info Über 
 
-## Über
+## Info
 
 Dieser Artikel ist Teil meiner Bachelorarbeit im Studiengang «Media Engineering» an der HTW Chur. In der begleitenden wissenschaftlichen Arbeit habe ich mich mit der Frage beschäftigt, inwiefern Machine Learning in der journalistischen Recherche eine Rolle spielen kann. Für Fragen, Anregungen und Kritik bin ich unter der Adresse <pscl.lbssr@gmail.com> erreichbar.
 

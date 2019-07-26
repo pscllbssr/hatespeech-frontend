@@ -2,6 +2,42 @@
     max-width 760px
     margin 0em auto
 
+    a
+        display inline-block
+        width: 35px;
+
+    @media medium 
+        position fixed
+        opacity .4
+        left 1vw
+        bottom 2vh   
+        transition opacity 200ms     
+
+        &:hover
+            opacity 1
+
+        a            
+            display block
+            margin-bottom 5px
+
 .btn--social
-    padding .2em 1em
-    font-size: .8rem
+    padding .2em 0
+    text-align: center
+
+.btn--twitter
+    &:hover
+        background #1da1f2
+        border-color #1da1f2
+.btn--in
+    &:hover
+        background #0077B5
+        border-color #0077B5
+.btn--fb
+    &:hover
+        background #3b5998
+        border-color #3b5998
+
+.btn--mail
+    &:hover
+        background clr-black
+        border-color clr-black

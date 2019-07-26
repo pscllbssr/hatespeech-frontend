@@ -23,11 +23,27 @@ body
   max-width 90vw
   margin 0 auto
 
+.content.custom
+  > p:first-child
+    position relative  
+    margin-bottom: 4em  
+  
+    &:after
+      content ''
+      border 1px solid clr-primary
+      position absolute
+      bottom -2em
+      left 48%
+      right 48%
+    
+
 p
 ul
 .custom-block
     max-width 760px
     margin 0 auto 1em
+
+
 
 
 .section-element
@@ -62,18 +78,22 @@ h3
 a
   color clr-primary
   text-decoration underline dotted
+
+  svg 
+    margin-left 1px
   
   &:hover
     text-decoration none
 
+hr
+    max-width 25px
+    margin 4em auto
+    border 1px solid clr-black
+    background clr-black
 
 
-.info-box
-  padding 1em 2em 
-  background clr-light
-
-  p, a
-    font-family: 'Source Sans Pro', sans-serif
-    text-align: left
-  
-
+div.fixed-nav
+  position absolute
+  top 0
+  left 0
+  padding-left 2vw

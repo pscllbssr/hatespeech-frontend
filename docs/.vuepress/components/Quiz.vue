@@ -15,8 +15,8 @@
             </div>
         </div>
         <div class="section-form__description sans-serif">
-            Neuegierig wie die Technik dahinter funktioniert? Unter <router-link to="methodology.html">Methodik</router-link>
-            findest du eine ausführliche Beschreibung des Vorgehens.
+            Die Beispiele enstammen dem verwendeten Datensatz für den Machine Learning Classifier. Unter <router-link to="methodology.html">Methodik</router-link>
+            findest du eine ausführliche Beschreibung dazu. 
         </div>
     </div>
 </template>
