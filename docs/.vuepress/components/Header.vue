@@ -6,10 +6,11 @@
                 <div class="sans-serif theme-header__meta">{{ $page.frontmatter.date }} - {{ $page.frontmatter.author }}</div>
             </div>            
         </header> 
-        <div class="parallax bubble-1" data-offset="0.1"></div>
-        <div class="parallax bubble-2" data-offset="0.2"></div> 
-        <div class="parallax bubble-3" data-offset="0.3"></div>   
-        <div class="parallax bubble-4" data-offset="0.4"></div>       
+        <div class="parallax bubble-3" data-offset="0.5"></div>
+        <div class="parallax bubble-2" data-offset="0.3"></div>
+        
+        <div class="parallax bubble-1" data-offset="0.1"></div>  <!--  
+        <div class="parallax bubble-4" data-offset="0.4"></div>       -->
     </div>
 </template>
 <script>

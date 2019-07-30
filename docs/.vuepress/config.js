@@ -15,8 +15,8 @@ module.exports = {
     locales: {
         '/': {
           lang: 'de-CH',
-          title: 'Der Hass im Netz',
-          description: 'Ein Artikel über den Hass im Netz und die Frage, ob uns Maschinen dabei helfen können, ihn zu bekämpfen.',
+          title: 'Lehrprojekt Bachelor',
+          description: 'Hasskommentare im Internet sind ein zunehmendes Problem. Viele hoffen deshalb auf eine künstliche Intelligenz. Doch können Maschinen für uns das Internet retten?',
           date: '9. August 2019',
           author: 'Pascal Albisser'
         }

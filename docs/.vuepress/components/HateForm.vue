@@ -2,7 +2,7 @@
     <div class="section-element section-form">
         <h2>Teste den Hate Speech Classifier</h2>
             <div v-if="loading" class="loading">
-                <p>loading...</p>
+                <p>Maschine inspiziert...</p>
             </div>
             <div v-if="!result">
                 <form @submit.prevent="submit">
