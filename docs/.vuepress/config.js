@@ -46,6 +46,5 @@ module.exports = {
         ['meta', {property: 'og:url', content: 'https://projekte.lbssr.ch/der-hass-im-netz/'}],
 
       ],
-    //dest: '.vuepress/deste'
 
 }
