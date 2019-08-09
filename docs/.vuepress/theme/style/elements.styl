@@ -29,11 +29,27 @@ textarea
     outline none
     margin-right .5em
 
-    &:hover
-        background clr-primary
-        color clr-white
-        border-color clr-primary
-        box-shadow none
+    &:active 
+      background clr-primary
+      color clr-white
+      border-color clr-primary
+      box-shadow none
+
+    @media (hover:hover) 
+      &:hover
+          background clr-primary
+          color clr-white
+          border-color clr-primary
+          box-shadow none
+
+button.active-state-fixer
+    display block
+    height 0
+    width 0
+    border 0
+    visibility hidden
+    outline 0
+    position absolute
 
 a.btn
   text-decoration: none
@@ -52,3 +68,7 @@ a.btn
 
   p
     text-align: center
+
+@media (hover: none) 
+  abbr, abbr[title] 
+    text-decoration none
