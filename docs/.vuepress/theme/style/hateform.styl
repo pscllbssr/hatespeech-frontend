@@ -13,7 +13,13 @@
         color clr-gray
     span.danger
         color clr-primary
-        
+
+$keyframe-name = pulse
+@keyframes {$keyframe-name}
+  for i in 0..10
+    {10% * i}
+      opacity (i/10)
+
 .loading
     position absolute
     top 0
@@ -23,4 +29,9 @@
     display flex
     align-items center
     background #ffffffc2
-    font-size 2rem
+    font-size 1.5rem
+    p
+        animation pulse 1s infinite alternate 
+
+    @media medium 
+        font-size 2rem
