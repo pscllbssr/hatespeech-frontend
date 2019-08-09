@@ -4,8 +4,9 @@
         <div v-if="step == 1 && currentComment">
             <p class="quiz__comment">{{ currentComment.text }}</p>
             <div>
-                <button @click="loadResult(true)" class="btn">Ja</button>
-                <button @click="loadResult(false)" class="btn">Nein</button>
+                <button class="active-state-fixer"></button>
+                <button @click="loadResult(true)" class="btn" id="quiz-yes">Ja</button>
+                <button @click="loadResult(false)" class="btn" id="quiz-no">Nein</button>
             </div>
         </div>
         <div v-if="step == 2">
