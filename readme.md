@@ -2,6 +2,6 @@
 
 An article about hate speech and the difficulty of combating it with AI (German)
 
-[https://projekte.lbssr.ch/der-hass-im-netz/](Der Hass im Netz)
+[Der Hass im Netz](https://projekte.lbssr.ch/der-hass-im-netz/)
 
-Built on [https://vuepress.vuejs.org/](VuePress)
+Built on [VuePress](https://vuepress.vuejs.org/)
